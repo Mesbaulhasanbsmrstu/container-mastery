@@ -1,20 +1,10 @@
-\# container-mastery
+# container-mastery
 
-
-
-6-week Docker \& Kubernetes learning project: a .NET 10 API + SQL Server,
-
+6-week Docker & Kubernetes learning project: a .NET 10 API + SQL Server,
 evolving from `docker run` to GitOps.
 
-
-
-\## Week 1 target
-
-API runs from a Dockerfile I wrote; SQL Server data survives deleting its container.
-
-
-
-\## Demo
+## Week 2 target
+A multi-stage, non-root image with no critical CVEs, pushed to GHCR with proper tags.
 
 ## Demo
 
@@ -31,4 +21,3 @@ curl http://localhost:5000/weatherforecast
 docker volume create sqldata
 docker run -d --name sql -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<strong-password>" -p 14333:1433 -v sqldata:/var/opt/mssql mcr.microsoft.com/mssql/server:2022-latest
 ```
-
