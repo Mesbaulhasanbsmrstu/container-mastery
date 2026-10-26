@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+.git/
+journal/
+k8s/
+charts/
+*.md
