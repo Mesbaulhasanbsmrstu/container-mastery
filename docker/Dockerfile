@@ -7,7 +7,8 @@ COPY src/TaskApi/ .
 RUN dotnet publish -c Release -o /app --no-restore
 
 # ---- runtime stage ----
-FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled AS runtime
 WORKDIR /app
 COPY --from=build /app .
+USER $APP_UID
 ENTRYPOINT ["dotnet", "TaskApi.dll"]

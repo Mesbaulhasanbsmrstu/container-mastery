@@ -1,24 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wpY3HXpWdak=",
+  "dgSpecHash": "CzoM4XlYJfI=",
   "success": true,
   "projectFilePath": "D:\\Learning\\container-mastery\\src\\TaskApi\\TaskApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
-    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.14\\microsoft.aspnetcore.openapi.10.0.14.nupkg.sha512",
+    "C:\\Users\\Hp\\.nuget\\packages\\microsoft.openapi\\2.12.2\\microsoft.openapi.2.12.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "D:\\Learning\\container-mastery\\src\\TaskApi\\TaskApi.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\Learning\\container-mastery\\src\\TaskApi\\TaskApi.csproj",
-      "libraryId": "Microsoft.OpenApi",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }
