@@ -11,4 +11,5 @@ FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled-extra AS runtime
 WORKDIR /app
 COPY --from=build /app .
 USER $APP_UID
+LABEL org.opencontainers.image.source="https://github.com/Mesbaulhasanbsmrstu/container-mastery"
 ENTRYPOINT ["dotnet", "TaskApi.dll"]
