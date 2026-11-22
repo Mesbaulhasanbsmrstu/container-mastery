@@ -1,0 +1,29 @@
+name: taskapp
+
+services:
+  sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${SA_PASSWORD}
+    ports:
+      - "14333:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: taskapi:dev
+    environment:
+      ConnectionStrings__TaskDb: "Server=sql,1433;Database=TaskDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True"
+    ports:
+      - "5000:8080"
+    depends_on:
+      - sql
+
+volumes:
+  sqldata:
+    name: sqldata
+    external: true
