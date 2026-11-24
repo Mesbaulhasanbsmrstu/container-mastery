@@ -26,6 +26,7 @@ services:
       ConnectionStrings__TaskDb: "Server=sql,1433;Database=TaskDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True"
     ports:
       - "127.0.0.1:5000:8080"
+      
     depends_on:
       sql:
         condition: service_healthy
